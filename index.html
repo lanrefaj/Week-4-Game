@@ -19,27 +19,39 @@
 
 <div id="Crystal Game">
 
-<p>You will be given a random number at the start of the game. 
+<p>Welcome to my Crystal Collector Game. Have fun & good luck!
+You will be given a random number at the start of the game. 
 There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. 
 You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number. 
 The value of each crystal is hidden from you until you click on it. 
-Each time when the game starts, the game will change the values of each crystal. </br>
-</br>Welcome to my Crystal Collector Game. Have fun & good luck!</p>
+Each time when the game starts, the game will change the values of each crystal.
+</p>
+
+<p>Click this button to start & generate a random number <button onclick="comp()">Give Me A Number</button></p>
 	
-<p class="numbers">Computer:</p>
+<p class="numbers">Computer:</p><p id="randomcomputer"></p>
 <p class="numbers">Score:</p>
+<!-- Score here ^ should store the sum of the values of the crystal buttons clicked -->
 
 <button id="crystal1"><img src="Assets/Images/CrystalImage1.jpg" alt="Crystal1" style="width:200px"></button>
 <button id="crystal2"><img src="Assets/Images/CrystalImage2.jpg" alt="Crystal2" style="width:200px"></button>
 <button id="crystal3"><img src="Assets/Images/CrystalImage3.jpg" alt="Crystal3" style="width:200px"></button>
 <button id="crystal4"><img src="Assets/Images/CrystalImage4.jpg" alt="Crystal4" style="width:200px"></button>
 
-<p id="scoresW">Wins:</p>
-<p id="scoresL">Losses:</p>
+<!-- Buttons here ^ should generate random numbers per game and once these numbers are clicked they should update 'Score' -->
+
+<p id="scoresW">Wins:</p><p id="scoresL">Losses:</p>
+
+<!-- Wins & Losses should capture how many times the user has successfully reached the comptuer value based on the clicking of buttons and how many times the user has failed. -->
 
 </div>
 
 <script>
+
+	function comp() {
+		var x = document.getElementById("randomcomputer")
+		x.innerHTML = Math.floor((Math.random()*100) + 1);
+	}
 
 	var randomNumber
 
@@ -63,6 +75,8 @@ Each time when the game starts, the game will change the values of each crystal.
 		jQuery(this).text(randomnumber);
 
 	});
+
+/* Buttons here should generate random numbers which will be added to the users 'Score' once clicked. */
 
 </script>
 			
