@@ -19,38 +19,48 @@
 
 <div id="Crystal Game">
 
-<p>Welcome to my Crystal Collector Game. Have fun & good luck!</p>
+<p>You will be given a random number at the start of the game. 
+There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. 
+You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number. 
+The value of each crystal is hidden from you until you click on it. 
+Each time when the game starts, the game will change the values of each crystal. </br>
+</br>Welcome to my Crystal Collector Game. Have fun & good luck!</p>
 	
-<p class="scores">Computer:</p>
+<p class="numbers">Computer:</p>
+<p class="numbers">Score:</p>
 
 <button id="crystal1"><img src="Assets/Images/CrystalImage1.jpg" alt="Crystal1" style="width:200px"></button>
 <button id="crystal2"><img src="Assets/Images/CrystalImage2.jpg" alt="Crystal2" style="width:200px"></button>
 <button id="crystal3"><img src="Assets/Images/CrystalImage3.jpg" alt="Crystal3" style="width:200px"></button>
 <button id="crystal4"><img src="Assets/Images/CrystalImage4.jpg" alt="Crystal4" style="width:200px"></button>
 
-<p class="scores">User:</p>
+<p id="scoresW">Wins:</p>
+<p id="scoresL">Losses:</p>
 
 </div>
 
 <script>
 
+	var randomNumber
+
 	$('#crystal1').click(function(){
-		alert('Good Work Lanre, Keep It Up');
+		alert('You guessed x');
 
 	});
 
 	$('#crystal2').click(function(){
-		alert('Good Work Lanre, Keep It Up2');
+		alert('You guessed x');
 
 	});
 
 	$('#crystal3').click(function(){
-		alert('Good Work Lanre, Keep It Up3');
+		alert('You guessed x');
 
 	});
 
 	$('#crystal4').click(function(){
-		alert('Good Work Lanre, Keep It Up4');
+		var randomNumber = 1 + Math.floor(Math.random() * 2);
+		jQuery(this).text(randomnumber);
 
 	});
 

@@ -14,15 +14,36 @@ h1 {
 	text-align: center;
 }
 
+p {
+	text-align: center;
+}
+
 #crystal {
 	width: 220px;
 	height: 150px;
 	background-color: #000000;
 }
 
-.scores {
+.numbers {
 	font-size: 30px;
 	font-style: bold;
 	font-family: chicago;
 	text-align: center;
 }
+
+#scoresW {
+	font-size: 30px;
+	font-style: bold;
+	font-family: chicago;
+	text-align: center;
+	color: blue;
+}
+
+#scoresL {
+	font-size: 30px;
+	font-style: bold;
+	font-family: chicago;
+	text-align: center;
+	color: red;
+}
+
